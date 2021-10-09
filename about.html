@@ -18,11 +18,14 @@
     crossorigin="anonymous"></script>
   <link href="/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
   <title>Document</title>
 </head>
 
 <body style="height: 100vh;">
-  <header class="container p-xs-0 m-xs-0 fixed-top">
+  <header class="container p-xs-0 m-xs-0 fixed-top" id="headbar">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
 
@@ -35,7 +38,7 @@
           </svg>
         </button>
         <div class="collapse navbar-collapse text-center shadow-lg" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex w-100 justify-content-between">
+          <div class="navbar-nav d-flex w-100 justify-content-between ab-img">
             <a class="flex-fill nav-link" aria-current="page" href="index.html">Kezdőlap</a>
             <a class="flex-fill nav-link active" href="about.html">Leírás</a>
             <a class="flex-fill nav-link" href="maps.html">Tarkov terkép</a>
@@ -45,10 +48,41 @@
       </div>
     </nav>
   </header>
-  <main class="container-fluid m-0 p-0 grad-bg text-gray">
-    <img src="img/about_bg.jpg" class="d-block d-lg-none container-fluid p-0">
 
-    <section class="d-flex flex-column justify-content-lg-end align-items-center flex-grow-1 full-size about-bg fit" id="landing-section">
+  <aside class="full ms-3" id="sidebar">
+    <nav class="sidenav d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column ab-img">
+        <a class="flex-fill d-flex nav-link align-items-center" aria-current="page" href="index.html">
+          <i class="bi bi-house-door-fill" style="font-size: 30px;"></i>
+          <span id="nav_info">Kezdőlap</span>
+        </a>
+        <a class="flex-fill d-flex nav-link align-items-center active" href="about.html">
+          <i class="bi bi-info-square-fill" style="font-size: 30px;"></i>
+          <span id="nav_info">Leírás</span>
+        </a>
+        <a class="flex-fill d-flex nav-link align-items-center" href="maps.html">
+          <i class="bi bi-geo-alt-fill" style="font-size: 30px;"></i>
+          <span id="nav_info">Tarkov terkép</span>
+        </a>
+        <a class="flex-fill d-flex nav-link align-items-center" href="media.html">
+          <i class="bi bi-collection-play-fill" style="font-size: 30px;"></i>
+          <span id="nav_info">Média</span>
+        </a>
+        <a class="flex-fill d-flex nav-link align-items-center" id="toggle_small_nav">
+          <i id="toggle_icon" class="bi bi-arrow-bar-right" style="font-size: 30px;"></i>
+          <span id="nav_info">Becsuk</span>
+        </a>
+      </div>
+
+    </nav>
+  </aside>
+
+  <main class="container-fluid m-0 p-0 text-gray dark-bg">
+    <img src="img/about_bg.jpg" class="d-block d-lg-none img-fluid p-0">
+
+    <section class="d-flex flex-column justify-content-lg-end align-items-center flex-grow-1 full-size about-bg fit"
+      id="landing-section">
+      <h1 class="d-none">Bevezető</h1>
       <p class="container fs-5 mt-5 mt-lg-0">
         Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
         keltett; a helyi lakosság elmenekült a
@@ -61,66 +95,69 @@
         meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
       </p>
 
-      <a href="#content-section" class="d-none d-sm-block"><i class="bi bi-caret-down-fill icon-btn" style="font-size: 5em;"></i></a>
+      <a id="content-section" href="#content-section" class="d-none d-sm-block down"><i class="bi bi-caret-down-fill icon-btn"
+          style="font-size: 5em;"></i></a>
     </section>
 
-    <section class="container" id="content-section">
+    <section class="container">
+      <h1 class="d-none">A játékosról</h1>
       <p class="fs-5 mt-5">
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
-        Norvinsk régióban napról napra komplikáltabbá válik a helyzet. Szakadatlan tűzharc Tarkovban hatalmas pánikot
-        keltett; a helyi lakosság elmenekült a
-        városból, de akik maradtak mások kárán akarnak vagyonhoz jutni. Elfogadva az új valóságot, Tarkov-ot csapatokba
-        verődött, felfegyverzett helyiek,
-        másnéven “Scavek” (barbár fosztogatók) elkezdték területekre osztani a várost. Ma, Tarkov nem látható határokkal
-        van felosztva és irányítva
-        különböző csoportok általt. Ezek a mohó, nyereséghajhászó fegyveresek mindent megtesznek céljaik elérése
-        érdekében, beleértve a civilek
-        meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
+        A játékos az egyik zsoldos bőrébe bújva tapasztalhatja meg a mindennapokat aki túlélte a Tarkovban zajló
+        konfliktus kezdeti fázisát. Miután oldalt
+        választottunk - USEC vagy BEAR - a karakter megkezdi kimenekülését a városból. Tarkov elvan zárva a külvilágtól
+        ay Egyesült nemzetek és az Orosz
+        Hadsereg által, utánpótlás elvágva, és a kommunikáció a hadműveleti vezetéssel megszakadt. Ilyen körülmények
+        között kell mindekinek meghozni a
+        döntéseket és kijutni a káosz uralta metropoliszból.
       </p>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Jelen idő. Norvinsk régió, Tarkov város</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center justify-content-center">
+        <img src="img/ab1.jpg" class="ab-img img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
+
+        <p class="fs-5">
+          Az Escape From Tarkov történései egy fiktív helyen, Norvinsk régió egyik különleges gazdasági
+          övezetében játszódik ami átjáróvá vált Európa és Oroszország között. Kedvező körülmények egy
+          nemzetközi vállallatnak, azonban nem csak a törvénytisztelő bizniszeket vonzotta be, hanem a
+          kétes szándékú vállalatokat is. Fél év után politikai patthelyzet alakult át fegyveres konfliktussá
+          bevonzva az Egyesült Nemzetek-et és a Belügyminisztérium belső csapatait és a két katonai
+          magáncéget. A térség határait lezárták, és azok akik a kibontakozó helyi háború középpontjába
+          ragadtak elszakadtak a külvilágtól.
+        </p>
+      </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Az összecsapás a sötétség szélén.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+        <p class="fs-5">
+          A Norvinsk régióban a legaktívabb erők két katonai magáncég, amelyeket a kezdeti konfliktusban
+          részt vevő felek béreltek fel. A hírhedt Terra Group nemzetközi vállalat által alkalmazott USEC
+          erőteljesen részt vesz a fegyveres összecsapásokban, akadályozva a Terra Group
+          tevékenységének a helyi hatóságok által folytatott vizsgálatát. Sőt, a hírszerző ügynökségek
+          szerint az USEC fegyveres fedezetet nyújt a külföldi cégek illegális munkájához és kutatásaihoz,
+          míg a BEAR-t, amelyet állítólag az orosz kormány közvetlen utasítására hoztak létre, a Norvinsk
+          régió tisztviselői alkalmazzák, hogy a Terra Group illegális tevékenységére utaló bármilyen
+          bizonyítékot feltárjanak.
+        </p>
+
+        <img src="img/ab1.jpg" class="ab-img img-fluid m-auto ms-md-5" style="width: 350px; height: 200px;" />
+      </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Eljött az idő.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+        <img src="img/ab3.jpg" class="ab-img img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
+
+        <p>
+        <ul class="fs-5">
+          <li>Végezz rajtaütéseket nagyszabású helyszíneken barátaiddal vagy egyedül.</li>
+          <li>Fedezd fel Tarkov város és külvárosainak számos egyedi és hiteles helyszínét: polgári tömbök,
+            vegyi üzem területe, AA katonai bázis, Tarkov város szíve, privát lakóövezet és több más helyszín,
+            valós időben valós időjárási körülmények és napszakváltozások mellett.</li>
+          <li>Találj hasznos információkat és tárgyakat, amelyek segítenek megérteni, mi történik a városban.</li>
+          <li>Működjön együtt volt ellenségekkel, változtassa meg a prioritásokat, hogy kibontakoztassa a
+            rejtélyeket, és élve meneküljön meg Tarkovból.</li>
+        </ul>
+        </p>
+      </div>
     </section>
   </main>
 </body>

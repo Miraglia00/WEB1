@@ -2,6 +2,7 @@
     --main-gray: rgb(197, 197, 197);
     --main-orange_o: rgb(244,168,54, 0.8);
     --main-orange: rgb(244,168,54);
+    --main-dim: rgb(130,116,87);
 }
 
 html, body {
@@ -10,6 +11,29 @@ html, body {
     position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
+}
+
+.sidenav {
+    height: 100%;
+    position: fixed;
+}
+
+aside.full {
+    position: absolute;
+    height: 100vw;
+}
+
+#sidebar {
+    display: none;
+}
+
+.hidden{
+    visibility: hidden !important;
+}
+
+#nav_info {
+    margin-left: 20px;
+    display: none;
 }
 
 /* CUSTOM SCROLL */
@@ -26,7 +50,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--main-orange); 
+    background: var(--main-dim); 
 }
 
 .main-bg {
@@ -46,6 +70,10 @@ html, body {
 .grad-bg {
     background: rgb(46,43,34);
     background: linear-gradient(0deg, rgba(46,43,34,1) 0%, rgba(54,53,48,1) 36%, rgba(12,12,12,1) 48%);
+}
+
+.dark-bg {
+    background-color: #090809;
 }
 
 .full-size {
@@ -76,22 +104,23 @@ header.container {
     padding: 15px 20px 15px 20px;
     text-decoration: none;
     color: var(--main-gray);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     border: 0px;
+    cursor: pointer;
 }
 
 
 .navbar-nav a:first-child{
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .navbar-nav a:last-child{
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 .nav-link:hover, .custom-btn:hover{
     color: black !important;
-    background-color: var(--main-orange_o);
+    background-color: var(--main-dim);
     transition: 100ms ease-in-out;
 }
 
@@ -103,11 +132,15 @@ header.container {
 .glow {
     line-height: 1.5em;
     text-align: center;
-    text-shadow: 0 0 20px var(--main-orange_o), 0 0 30px var(--main-orange_o);
+    text-shadow: 0 0 20px var(--main-dim), 0 0 30px var(--main-dim);
 }
 
 .text-gray {
     color: var(--main-gray);
+}
+
+.text-dim {
+    color: var(--main-dim);
 }
 
 .icon-btn {
@@ -117,8 +150,15 @@ header.container {
 }
 
 .icon-btn:hover{
-    color: var(--main-orange_o);
+    color: var(--main-dim);
     transition: 100ms ease-in-out;
+}
+
+.ab-img {
+    -webkit-box-shadow: -2px 1px 50px 5px #827457; 
+    box-shadow: -2px 1px 50px 5px #827457;
+    border-radius: 5px;
+    border: 1px solid var(--main-dim);
 }
 
 @media (max-width: 992px) {
@@ -139,7 +179,7 @@ header.container {
         border-radius: 0px 0px 0px 0px;
     }
 
-    .about-bg {
+    .about-bg, .main-bg {
         background-image: none;
     }
 

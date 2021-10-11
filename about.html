@@ -20,11 +20,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
   <title>Document</title>
 </head>
 
-<body style="height: 100vh;">
+<body style="height: 100vh;" class="dark-bg">
+
+  <div class="modal" tabindex="-1" id="feedback_modal">
+    <div class="modal-dialog">
+      <div class="modal-content dark-bg glow-box text-light">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            id="close_modal_btn"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger px-3 py-2" >Töröl</button>
+          <button type="button" class="btn custom-btn glow-box">Küldés</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="container p-xs-0 m-xs-0 fixed-top" id="headbar">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -38,20 +57,30 @@
           </svg>
         </button>
         <div class="collapse navbar-collapse text-center shadow-lg" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex w-100 justify-content-between ab-img">
+          <div class="navbar-nav d-flex w-100 justify-content-between glow-box">
             <a class="flex-fill nav-link" aria-current="page" href="index.html">Kezdőlap</a>
             <a class="flex-fill nav-link active" href="about.html">Leírás</a>
             <a class="flex-fill nav-link" href="maps.html">Tarkov terkép</a>
             <a class="flex-fill nav-link" href="media.html">Média</a>
           </div>
+
+          <button type="button" class="btn custom-btn glow-box ms-5 open_modal_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-lg"
+              viewBox="0 0 16 16">
+              <path
+                d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z">
+              </path>
+            </svg>
+          </button>
+
         </div>
       </div>
     </nav>
   </header>
 
   <aside class="full ms-3" id="sidebar">
-    <nav class="sidenav d-flex justify-content-center align-items-center">
-      <div class="d-flex flex-column ab-img">
+    <nav class="sidenav d-flex justify-content-center align-items-center flex-column">
+      <div class="d-flex flex-column glow-box">
         <a class="flex-fill d-flex nav-link align-items-center" aria-current="page" href="index.html">
           <i class="bi bi-house-door-fill" style="font-size: 30px;"></i>
           <span id="nav_info">Kezdőlap</span>
@@ -74,10 +103,20 @@
         </a>
       </div>
 
+      <button type="button" class="btn custom-btn mt-5 open_modal_btn glow-box align-self-start">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-lg"
+          viewBox="0 0 16 16">
+          <path
+            d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z">
+          </path>
+        </svg>
+      </button>
     </nav>
+
+    
   </aside>
 
-  <main class="container-fluid m-0 p-0 text-gray dark-bg">
+  <main class="container-fluid m-0 p-0 text-gray mb-5">
     <img src="img/about_bg.jpg" class="d-block d-lg-none img-fluid p-0">
 
     <section class="d-flex flex-column justify-content-lg-end align-items-center flex-grow-1 full-size about-bg fit"
@@ -95,8 +134,8 @@
         meggyilkolását és a közvetlen összecsapást a két katonai magáncéggel.
       </p>
 
-      <a id="content-section" href="#content-section" class="d-none d-sm-block down"><i class="bi bi-caret-down-fill icon-btn"
-          style="font-size: 5em;"></i></a>
+      <a id="content-section" href="#content-section" class="d-none d-sm-block down"><i
+          class="bi bi-caret-down-fill icon-btn" style="font-size: 5em;"></i></a>
     </section>
 
     <section class="container">
@@ -113,7 +152,7 @@
 
       <h1 style="margin-top: 100px" class="text-dim mb-3">Jelen idő. Norvinsk régió, Tarkov város</h1>
       <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center justify-content-center">
-        <img src="img/ab1.jpg" class="ab-img img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
+        <img src="img/ab1.jpg" class="glow-box img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
 
         <p class="fs-5">
           Az Escape From Tarkov történései egy fiktív helyen, Norvinsk régió egyik különleges gazdasági
@@ -139,12 +178,12 @@
           bizonyítékot feltárjanak.
         </p>
 
-        <img src="img/ab1.jpg" class="ab-img img-fluid m-auto ms-md-5" style="width: 350px; height: 200px;" />
+        <img src="img/ab1.jpg" class="glow-box img-fluid m-auto ms-md-5" style="width: 350px; height: 200px;" />
       </div>
 
       <h1 style="margin-top: 100px" class="text-dim mb-3">Eljött az idő.</h1>
       <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
-        <img src="img/ab3.jpg" class="ab-img img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
+        <img src="img/ab3.jpg" class="glow-box img-fluid m-auto me-md-5" style="width: 350px; height: 200px;" />
 
         <p>
         <ul class="fs-5">
@@ -158,8 +197,125 @@
         </ul>
         </p>
       </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Élj át magával ragadó harci élmény.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+
+        <div style="width: 100vh !important;" class="me-md-5 d-none d-md-block">
+          <img src="img/ab4.jpg" class="glow-box img-fluid m-auto mb-5"
+            style="width: 350px !important; height: 200px;" />
+          <img src="img/ab5.jpg" class="glow-box img-fluid m-auto" style="width: 350px !important; height: 200px;" />
+        </div>
+
+        <img src="img/ab4.jpg" class="glow-box img-fluid m-auto  d-block d-md-none"
+          style="width: 350px !important; height: 200px;" />
+
+        <p class="flex-fill">
+        <ul class="fs-5">
+          <li>Íme a HECS - Hazardous Environment Combat Simulator (Veszélyes környezet harci szimulátor)
+            rendszermodul.</li>
+          <li>Érezd a karaktered az egészségi és fizikai jellemzőkön keresztül, beleértve a hidratáltságot,
+            energiát, vérnyomást, vérveszteséget, töréseket, zúzódásokat, mérgezést, kimerültséget,
+            remegést és így tovább.</li>
+          <li>Irányítsd szabadon a karakteredet - zökkenőmentes sebesség állítás-és állásváltások és
+            átmenetek, dőlés és hasalás.</li>
+          <li>Legyen tisztában a valós ballisztikával és a lövedék eltalálásának fizikájával.</li>
+          <li>Készülj fel arra, hogy úgy érezd a fegyvert, mint a való életben. Szokjon hozzá a fegyver
+            működésének fizikai fogalmaihoz - elakadás, túlmelegedés, elhasználódás, újratöltés, célzás,
+            töltés és természetesen lövés.</li>
+          <li>Fedezd fel az eddigi legfejlettebb fegyvermodding rendszert. Változtass meg mindent, amit csak
+            akarsz, hogy kibővítsd a fegyvered taktikai képességeit.</li>
+          <li>Kölcsönhatásba léphetsz a környezettel, hogy szituációs uralmat szerezz - kapcsolj lámpákat,
+            kezdj taktikai behatolást az ajtók interakciós rendszerével.</li>
+        </ul>
+        </p>
+
+        <img src="img/ab5.jpg" class="glow-box img-fluid m-auto d-block d-md-none"
+          style="width: 350px !important; height: 200px;" />
+
+      </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Maradj életben és figyelj.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+
+        <img src="img/ab6.jpg" class="glow-box img-fluid me-md-5 m-auto"
+          style="width: 350px !important; height: 200px;" />
+
+        <p class="flex-fill">
+        <ul class="fs-5">
+          <li>Ha meghalsz, mindent elveszítesz, amit a rajtaütés során elvettél és találtál. Szervezd meg a
+            tartalék leltárkészleteidet, használj biztonságos tárolókat és biztosítást.</li>
+          <li>Kezeld magadat, a felszerelésedet és a fegyvereidet megfelelően. Alkalmazd a gyógyszerek
+            széles választékát, hogy életben maradj és koncentrálj. Javítsd meg páncélodat, lőfegyvereidet és
+            hideg acélodat. Tisztítsd meg a vizet és válogasd össze az élelmiszeradagjaidat.</li>
+          <li>Kezeld a leltárkészletedet klasszikus slot-alapú módon. Szervezd és módosítsd a ládakészletedet,
+            mint egy igazi profi.
+          </li>
+          <li>Használd a speciális felszereléseket, mint például az NVG-ket, a rádiós fejhallgatókat, a
+            ballisztikus mellényeket és a sisakokat.</li>
+          <li>Fosztogasd az elesett ellenségeket és konténereket, hogy a legkülönfélébb használati és csere
+            tárgyakhoz juss.</li>
+          <li>Szerezz tapasztalatot - szerezz pontokat és lépj szintet. Közel 100 egyedi képességet képezhetsz
+            ki az ismétlődő cselekvések elvén keresztül.</li>
+          <li>Működj együtt idegenekkel, vagy lődd hátba a barátodat - nincsenek szabályok.</li>
+        </ul>
+        </p>
+
+      </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Óvakodj a Scav-eketől.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+
+        <img src="img/ab7.jpg" class="glow-box img-fluid me-md-5 m-auto"
+          style="width: 350px !important; height: 200px;" />
+
+        <p class="flex-fill">
+        <ul class="fs-5">
+          <li>Minél hangosabban sikítasz - annál gyorsabban jönnek. Készítsd elő a ravasz ujjad.</li>
+          <li>Állj szemben az AI által irányított civil vad dögevőkkel (vagy Scav-ek), és játssz Scav-ként előre
+            beállított véletlenszerű felszereléssel, fegyverrel és egészségi állapottal.</li>
+          <li>Nem kell aggódnod a halál miatt - nem veszítesz semmit a fő karakteredből.
+          </li>
+          <li>Juss ki élve, miközben Scav-et játszol, majd a zsákmányát átviheted a fő karaktered rejtekhelyére.</li>
+        </ul>
+        </p>
+
+      </div>
+
+      <h1 style="margin-top: 100px" class="text-dim mb-3">Beilleszkedni és berendezkedni.</h1>
+      <div class="d-flex align-items-start flex-column flex-md-row align-items-md-center">
+
+        <img src="img/ab8.jpg" class="glow-box img-fluid me-md-5 m-auto"
+          style="width: 350px !important; height: 200px;" />
+
+        <p class="flex-fill">
+        <ul class="fs-5">
+          <li>Tapasztalj meg nem harci tevékenységeket.</li>
+          <li>Kommunikálj és kereskedj NPC kereskedőkkel, nyerd el a bizalmukat, hogy különleges árukat és
+            küldetéseket kapj.</li>
+          <li>Alkalmazkodj a gazdasághoz, amely valós időben változik a többi játékos műveletei és eseményei
+            szerint, amelyet a mesterséges intelligencia irányít.
+          </li>
+          <li>Add el a zsákmányodat rongyvásárokon és árveréseken.</li>
+          <li>Dolgozz a készleteddel, gyógyítsd a karaktered, javítsd és módosítsd a fegyvereket, vizsgálj meg
+            tárgyakat, csevegj, hogy híreket és pletykákat tudj meg.</li>
+          <li>Alapítsd meg saját harci csoportodat egyedi képességekkel.</li>
+        </ul>
+        </p>
+
+      </div>
     </section>
   </main>
+
+  <footer class="container dark-bg text-light mt-5 text-center pb-5">
+    <hr />
+    <p>Minden tartalmi elem az EFT hivatalos oldaláról származik!</p>
+    <span>Forrás:</span>
+    <br />
+    <a class="link" href="https://www.escapefromtarkov.com/" target="_blank">https://www.escapefromtarkov.com/</a>
+
+  </footer>
+
 </body>
 
 </html>

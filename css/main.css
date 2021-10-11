@@ -1,7 +1,5 @@
 :root {
     --main-gray: rgb(197, 197, 197);
-    --main-orange_o: rgb(244,168,54, 0.8);
-    --main-orange: rgb(244,168,54);
     --main-dim: rgb(130,116,87);
 }
 
@@ -31,6 +29,10 @@ aside.full {
     visibility: hidden !important;
 }
 
+.hide {
+    display: none !important;
+}
+
 #nav_info {
     margin-left: 20px;
     display: none;
@@ -52,6 +54,8 @@ aside.full {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--main-dim); 
 }
+
+/* CUSTOM SCROLL END */
 
 .main-bg {
     background-image: url('/img/bg2.png');
@@ -129,7 +133,7 @@ header.container {
     font-weight: 600;
 }
 
-.glow {
+.glow-text {
     line-height: 1.5em;
     text-align: center;
     text-shadow: 0 0 20px var(--main-dim), 0 0 30px var(--main-dim);
@@ -154,12 +158,32 @@ header.container {
     transition: 100ms ease-in-out;
 }
 
-.ab-img {
+.glow-box {
     -webkit-box-shadow: -2px 1px 50px 5px #827457; 
     box-shadow: -2px 1px 50px 5px #827457;
     border-radius: 5px;
     border: 1px solid var(--main-dim);
 }
+
+/* CUSTOM LINK COLORS */
+
+a.link:link {
+    color: var(--main-dim);
+}
+
+a.link:visited {
+    color: gray;
+}
+
+a.link:hover {
+    color: rgb(206, 96, 96);
+}
+
+a.link:active {
+    color: rgb(120, 120, 219);
+}
+
+/* CUSTOM LINK COLORS END */
 
 @media (max-width: 992px) {
     .navbar {

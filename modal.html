@@ -1,0 +1,157 @@
+<div class="modal fade" tabindex="-1" id="feedback_modal">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content gray-bg text-gray glow-box">
+            <div class="d-flex justify-content-between align-items-center p-3">
+                <span class="text-center fs-5">Véleményed fontos számomra!</span>
+                <svg style="cursor: pointer;" data-bs-dismiss="modal" xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path
+                        d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                </svg>
+            </div>
+            <div class="modal-body text-light">
+                <section class="container text-center">
+
+                    <p>Ez egy rajongói oldal ami a Battle State Games Escape
+                        From Tarkov játékáról készült.</p>
+                    <span>A tartalom forrása:</span>
+                    <br />
+                    <a class="link" href="https://www.escapefromtarkov.com/"
+                        target="_blank">https://www.escapefromtarkov.com/</a>
+
+                    <hr class="mb-1" />
+                </section>
+
+                <section class="container">
+                    <p class="text-center mb-4">Hagyj visszajelzést a tartalom vagy az oldallal kapcsolatban!</p>
+                    <form action="mailto: xihoxan703@otozuz.com" method="post" class="d-none d-lg-block">
+                        <div class="d-flex flex-row justify-content-between px-2 ">
+                            <fieldset>
+                                <p>Mennyire teteszett az oldal?</p>
+                                <div class="form-check d-flex align-items-center p-0">
+                                    <input class="form-check-input m-0" type="radio" name="radio_1" id="radio_1_1"
+                                        value="1" checked>
+                                    <label class="form-check-label ms-1" for="radio_1_1">
+                                        Tetszett
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center p-0">
+                                    <input class="form-check-input m-0" type="radio" name="radio_1" id="radio_1_2"
+                                        value="0">
+                                    <label class="form-check-label ms-1" for="radio_1_2">
+                                        Elmegy
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center p-0">
+                                    <input class="form-check-input m-0" type="radio" name="radio_1" id="radio_1_3"
+                                        value="-1">
+                                    <label class="form-check-label ms-1" for="radio_1_3">
+                                        Nem tetszett
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div>
+                                    <p>Ismered az Escape From Tarkovot?</p>
+                                    <div class="form-check d-flex align-items-center p-0">
+                                        <input class="form-check-input m-0" type="radio" name="radio_2" id="radio_2_1"
+                                            value="1" checked>
+                                        <label class="form-check-label ms-1" for="radio_2_1">
+                                            Ismerem
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-center p-0">
+                                        <input class="form-check-input m-0" type="radio" name="radio_2" id="radio_2_2"
+                                            value="0">
+                                        <label class="form-check-label ms-1" for="radio_2_2">
+                                            Hallottam róla
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-center p-0">
+                                        <input class="form-check-input m-0" type="radio" name="radio_2" id="radio_2_3"
+                                            value="-1">
+                                        <label class="form-check-label ms-1" for="radio_2_3">
+                                            Nem ismerem
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <fieldset class="col-8 offset-2">
+                            <label for="email_1" class="form-label m-0">E-mail:</label>
+                            <input type="email" maxlength="255" class="form-control mb-3" id="email_1" placeholder="E-mail">
+
+                            <label for="text_1" class="form-label m-0">Véleményed:</label>
+                            <textarea class="form-control mb-3" id="text_1" rows="3"
+                                placeholder="Fejtsd ki véleményed..." maxlength="2048"></textarea>
+
+                            <div class="form-check d-flex align-items-center p-0">
+                                <input class="form-check-input m-0" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label ms-1" for="flexCheckDefault">
+                                    Elfogadom az adatkezelési irányelvet
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input m-o" type="checkbox" value="" id="check_2">
+                                <label class="form-check-label ms-1" for="check_2">
+                                    Reklám célú e-maileket kaphatok
+                                </label>
+                            </div>
+                        </fieldset>
+
+
+                        <div class="d-flex justify-content-end align-items-center mt-2 mb-3">
+                            <button type="submit" class="btn custom-btn glow-box text-light me-2"
+                                style="padding: 15px 30px 15px 30px !important;">Küldés</button>
+
+                            <button type="reset" class="btn btn-danger"
+                                style="padding: 5px 30px 5px 30px !important;">Töröl</button>
+                        </div>
+                    </form>
+
+                    <!-- MOBILE-->
+                    <form action="mailto: xihoxan703@otozuz.com" method="post" class="d-block d-lg-none">
+                        <div class="px-2">
+                            <fieldset class="w-100 text-center d-flex flex-column">
+                                <p>Mennyire teteszett az oldal?</p>
+                                <input type="radio" class="btn-check" name="radio_3" id="radio_3_1" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-custom mb-2" for="radio_3_1">Tetszett</label>
+
+                                <input type="radio" class="btn-check" name="radio_3" id="radio_3_2" autocomplete="off">
+                                <label class="btn btn-outline-custom mb-2" for="radio_3_2">Elmegy</label>
+
+                                <input type="radio" class="btn-check" name="radio_3" id="radio_3_3" autocomplete="off">
+                                <label class="btn btn-outline-custom mb-2" for="radio_3_3">Nem tetszett</label>
+
+                            </fieldset>
+                            <fieldset class="w-100 text-center d-flex flex-column mt-5">
+                                <p>Ismered az Escape From Tarkovot?</p>
+                                <input type="radio" class="btn-check" name="radio_4" id="radio_4_1" autocomplete="off">
+                                <label class="btn btn-outline-custom mb-2" for="radio_4_1">Ismerem</label>
+
+                                <input type="radio" class="btn-check" name="radio_4" id="radio_4_2" autocomplete="off"
+                                    checked>
+                                <label class="btn btn-outline-custom mb-2" for="radio_4_2">Halottam róla</label>
+
+                                <input type="radio" class="btn-check" name="radio_4" id="radio_4_3" autocomplete="off">
+                                <label class="btn btn-outline-custom mb-2" for="radio_4_3">Nem ismerem</label>
+
+                            </fieldset>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-2 mb-3 flex-column">
+                            <button type="submit" class="w-100 btn custom-btn glow-box text-light mb-2"
+                                style="padding: 15px 30px 15px 30px !important;">Küldés</button>
+
+                            <button type="reset" class="w-100 btn btn-danger"
+                                style="padding: 5px 30px 5px 30px !important;">Töröl</button>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>

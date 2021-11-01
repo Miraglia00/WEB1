@@ -1,0 +1,57 @@
+
+@media print {
+
+    * {
+        background-image: none !important;
+        color: black !important;
+        background-color: white;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-color: black !important;
+    }
+    .print-hide, .navbar, #important-btns, #goto, aside, nav, .up, footer, .down, #botnav, #headbar, caption{
+        display: none !important;
+    }
+
+    main.container-fluid {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.container div {
+        page-break-before: always;
+        display: block;
+    }
+
+    .glow-box {
+        box-shadow: none !important;
+    }
+
+    #landing-section {
+        height: fit-content !important;
+    }
+
+    .mt-lg-200, .mt-100 {
+        margin: 0;
+    }
+
+    .print-show {
+        display: block !important;
+    }
+
+    table {
+        border-color: black !important;
+    }
+
+    .border-light, .border-end, .border-top{
+        border-color: unset !important;
+    }
+
+    hr {
+        background-color: black !important;
+    }
+}
+    

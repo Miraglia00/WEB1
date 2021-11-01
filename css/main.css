@@ -1,5 +1,5 @@
 :root {
-    --main-gray: rgb(197, 197, 197);
+    --main-gray: rgb(128,128,128);
     --main-dim: rgb(130,116,87);
 }
 
@@ -16,14 +16,37 @@ html, body {
     position: fixed;
 }
 
+.grey{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
 aside.full {
     position: absolute;
     height: 100vw;
 }
 
+aside.bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+} 
+
 #sidebar {
     display: none;
 }
+
+#important-btns{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999999;
+    height: 50px;
+}
+
 
 .hidden{
     visibility: hidden !important;
@@ -33,7 +56,12 @@ aside.full {
     display: none !important;
 }
 
-#nav_info {
+.fullsized {
+    width: 100%;
+    height: 100%;
+}
+
+.nav_info {
     margin-left: 20px;
     display: none;
 }
@@ -58,14 +86,14 @@ aside.full {
 /* CUSTOM SCROLL END */
 
 .main-bg {
-    background-image: url('/img/bg2.png');
+    background-image: url('../img/bg2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .about-bg {
-    background-image: url('/img/about_bg.jpg');
+    background-image: url('../img/about_bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -78,6 +106,14 @@ aside.full {
 
 .dark-bg {
     background-color: #090809;
+}
+
+.gray-bg {
+    background-color: #252425;
+}
+
+.dim-bg {
+    background-color: var(--main-dim);
 }
 
 .full-size {
@@ -93,7 +129,7 @@ h1{
     font-size: 2.4em;
 } 
 
-header.container {
+.container {
     padding-top: 50px;
 }
 .navbar-toggler {
@@ -102,6 +138,19 @@ header.container {
 
 .active{
     font-weight: 600;
+    color: white !important;
+}
+
+.small-maps-table {
+    border-width: 5px 5px !important; 
+    margin-bottom: 5rem !important; 
+    border-top: 3px solid var(--main-dim) !important;
+}
+
+.video-padding {
+    padding-top: 150px; 
+    padding-left: 25px; 
+    padding-right: 25px;
 }
 
 .nav-link, .custom-btn{
@@ -111,6 +160,18 @@ header.container {
     background-color: rgba(0, 0, 0, 0.9);
     border: 0px;
     cursor: pointer;
+}
+
+.btn-outline-custom {
+    color: white;
+    background-color: transparent;
+    border-color: var(--main-dim);
+}
+
+.btn-check:checked+ .btn-outline-custom{
+        color: black;
+        background-color: var(--main-dim);
+        font-weight: 600;
 }
 
 
@@ -159,10 +220,39 @@ header.container {
 }
 
 .glow-box {
-    -webkit-box-shadow: -2px 1px 50px 5px #827457; 
-    box-shadow: -2px 1px 50px 5px #827457;
+    -webkit-box-shadow: -2px 1px 50px 5px #827457 !important; 
+    box-shadow: -2px 1px 50px 5px #827457 !important;
     border-radius: 5px;
     border: 1px solid var(--main-dim);
+    z-index: 11 !important;
+}
+
+img.grey{
+    z-index: 9 !important;
+}
+
+figure {
+    z-index: 10 !important;
+}
+
+
+
+a.no-decor {
+    text-decoration: none;
+}
+
+.fixed350x200 {
+    width: 350px !important; 
+    height: 200px !important;
+}
+.fixed350xauto {
+    width: 350px !important; 
+    height: auto !important;
+}
+
+.img-md-fixed {
+    width: 100% !important; 
+    height: auto !important;
 }
 
 /* CUSTOM LINK COLORS */
@@ -183,6 +273,33 @@ a.link:active {
     color: rgb(120, 120, 219);
 }
 
+input[type="radio"].form-check-input:checked {
+   background-color:var(--main-dim);
+}
+
+.map-caption {
+    caption-side: top;
+}
+
+.img-td {
+    width: 0.1%;
+    padding: 0px !important;
+}
+
+.up {
+    position: fixed;
+    bottom: 20px;
+    right:20px
+}
+
+.border-color-dim {
+    border-color: var(--main-dim);
+}
+
+.twitch-div{
+    height: 350px;
+}
+
 /* CUSTOM LINK COLORS END */
 
 @media (max-width: 992px) {
@@ -190,7 +307,7 @@ a.link:active {
         width: 100vw;
     } 
 
-    header.container {
+    .container {
         padding: 0px;
         padding-top: 10px;
         margin: 0px;
@@ -230,8 +347,42 @@ a.link:active {
     }
 }
 
+.mt-100 {
+    margin-top: 100px;
+}
+
+.font-30px {
+    font-size: 30px;
+}
+
+.font-20px {
+    font-size: 20px;
+}
+
+@media (min-width: 1000px) and (max-width: 1550px) {
+    .twitch-div{
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .twitch-div{
+        height: 240px;
+    }
+}
+
 @media (min-width: 1900px) {
     html {
         font-size: 1.3rem;
     }
+}
+
+@media (min-width: 990px) {
+   .upper{
+       bottom: 150px;
+   }
+
+   .mt-lg-200 {
+        margin-top: 200px;
+   }
 }

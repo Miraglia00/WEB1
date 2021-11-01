@@ -1,97 +1,84 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <link href="/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script type = "text/javascript" src="/js/main.js"></script>
-    <title>Document</title>
+<head>
+  <meta http-equiv="Content-Language" content="hu" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <link href="./css/main.css" rel="stylesheet" id="css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="./js/main.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="./css/print.css" />
+  <title>Kezdőlap - Escape From Tarkov játék bemutató</title>
 </head>
+
 <body style="height: 100vh;" class="grad-bg">
 
-  <div class="modal" tabindex="-1" id="feedback_modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close_modal_btn"></button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+  <div id="important-btns" class="d-flex flex-row">
+    <button id="ism" class="align-self-center btn custom-btn p-1 px-2 glow-box">Ismétlődő elemek KI</button>
+
+    <img id="contr" src="./img/cont.png" class="ms-4" alt="Kontrasztos megjelenítés" />
+  </div>
+
+  <div id="modal_holder"></div>
+  <!-- STRICT XHTML FORMAT EZEN AZ OLDALON-->
+  <div class="container p-xs-0 m-xs-0 fixed-top">
+    <div class="navbar navbar-expand-lg navbar-dark hide-cont">
+      <div class="container-fluid">
+
+        <button id="toggle_nav_index" class="navbar-toggler" type="button">
+          <i class="bi bi-grid-3x3-gap-fill font-30px"></i>
+        </button>
+        <div class="collapse navbar-collapse text-center shadow-lg" id="navbarIndex">
+          <div class="navbar-nav d-flex w-100 justify-content-between glow-box">
+            <a class="flex-fill nav-link active" href="index.html">Kezdőlap</a>
+            <a class="flex-fill nav-link" href="about.html">Leírás</a>
+            <a class="flex-fill nav-link" href="maps.html">Tarkov terkép</a>
+            <a class="flex-fill nav-link" href="media.html">Média</a>
+            <a class="flex-fill nav-link open_modal_btn d-block d-lg-none">Kapcsolat / Információk</a>
+          </div>
+
+          <button type="button" class="d-lg-block d-none btn custom-btn glow-box ms-5 open_modal_btn">
+            <i class="bi bi-info-lg font-20px"></i>
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-  <header class="container p-xs-0 m-xs-0 fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
+  <div class="main-bg d-flex flex-column full-size align-items-center">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-            class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
-            <path
-              d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
-          </svg>
-        </button>
-        <div class="collapse navbar-collapse text-center shadow-lg" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex w-100 justify-content-between glow-box">
-            <a class="flex-fill nav-link active" aria-current="page" href="index.html">Kezdőlap</a>
-            <a class="flex-fill nav-link" href="about.html">Leírás</a>
-            <a class="flex-fill nav-link" href="maps.html">Tarkov terkép</a>
-            <a class="flex-fill nav-link" href="media.html">Média</a>
-          </div>
+    <img src="./img/bg1.jpg" class="img-fluid d-inline-block d-lg-none print-hide"
+      alt="Escape From Tarkov háttérkép, két fegyveres katonával" />
 
-          <button type="button" class="btn custom-btn glow-box ms-5" id='open_modal_btn'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-lg"
-              viewBox="0 0 16 16">
-              <path
-                d="m10.277 5.433-4.031.505-.145.67.794.145c.516.123.619.309.505.824L6.101 13.68c-.34 1.578.186 2.32 1.423 2.32.959 0 2.072-.443 2.577-1.052l.155-.732c-.35.31-.866.434-1.206.434-.485 0-.66-.34-.536-.939l1.763-8.278zm.122-3.673a1.76 1.76 0 1 1-3.52 0 1.76 1.76 0 0 1 3.52 0z">
-              </path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <div class="d-flex align-items-center justify-content-center container flex-fill flex-row flex-grow-1">
+      <h2 class="text-center main-title glow-text d-none d-sm-block">Escape from Tarkov egy sztori vezérelt, hardcore és
+        realisztikus
+        online belső nézetes akció RPG / szimulátor, MMO tulajdonságokkal keverve.</h2>
 
-    <main class="main-bg d-flex flex-column full-size align-items-center">
+      <h2 class="text-center main-title glow-text d-block d-sm-none">Escape from Tarkov <br /> Sztori vezérelt, <br />
+        hardcore és realisztikus <br />
+        akció RPG / szimulátor</h2>
+    </div>
 
-      <img src="img/bg1.jpg" class="img-fluid d-inline-block d-lg-none" />
+    <a href="about.html" class="glow-box btn mb-5 custom-btn text-light hide-cont" id="goto">
+      Készülj a túlélésre!
+      <i class="bi bi-chevron-double-right"></i>
+    </a>
 
-      <section class="d-flex align-items-center justify-content-center container flex-fill flex-row flex-grow-1">
-        <h2 class="text-center main-title glow-text d-none d-sm-block">Escape from Tarkov egy sztori vezérelt, hardcore és realisztikus
-          online belső nézetes akció RPG / szimulátor, MMO tulajdonságokkal keverve.</h2>
 
-        <h2 class="text-center main-title glow-text d-block d-sm-none">Escape from Tarkov <br /> Sztori vezérelt, <br /> hardcore és realisztikus <br />
-            akció RPG / szimulátor</h2>
-      </section>
 
-        <a href="about.html" class="glow-box btn mb-5 custom-btn">
-          Készülj a túlélésre!
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-          </svg>
-        </a>
-          
-          
-     
-    </main>
+  </div>
 </body>
+
 </html>

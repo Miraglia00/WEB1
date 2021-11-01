@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <link href="./css/main.css" rel="stylesheet" id="css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <link rel="stylesheet" href="./css/print.css" />
+  <title>Média, Videók - Escape From Tarkov játék bemutató</title>
+</head>
+
+<body style="height: 100vh;" class="dark-bg">
+  <div id="important-btns" class="d-flex flex-row">
+    <button id="ism" class="align-self-center btn custom-btn p-1 px-2 glow-box">Ismétlődő elemek KI</button>
+
+    <img id="contr" src="./img/cont.png" class="ms-4" />
+  </div>
+  <div id="modal_holder"></div>
+  <div class="d-none print-show">
+    <div class="d-flex justify-content-center full-size align-items-center">
+      <h2>Ezen az oldalon nincs nyomtatható anyag.</h2>
+    </div>
+  </div>
+  <header class="container p-xs-0 m-xs-0 fixed-top hide-cont" id="headbar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+
+        <button class="navbar-toggler glow-box dark-bg" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-grid-3x3-gap-fill font-30px"></i>
+        </button>
+        <div class="collapse navbar-collapse text-center shadow-lg" id="navbarNavAltMarkup">
+          <div class="navbar-nav d-flex w-100 justify-content-between glow-box">
+            <a class="flex-fill nav-link" aria-current="page" href="index.html">Kezdőlap</a>
+            <a class="flex-fill nav-link" href="about.html">Leírás</a>
+            <a class="flex-fill nav-link" href="maps.html">Tarkov terkép</a>
+            <a class="flex-fill nav-link active" href="media.html">Média</a>
+            <a class="flex-fill nav-link open_modal_btn d-block d-lg-none">Kapcsolat / Információk</a>
+          </div>
+
+          <button type="button" class="btn custom-btn glow-box ms-5 open_modal_btn text-gray d-none d-lg-block">
+            <i class="bi bi-info-lg font-20px"></i>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid p-0 text-gray print-hide">
+    <section class="d-none d-md-flex flex-column full-size video-padding">
+      <h2 class="visually-hidden">Escape From Tarkov trailer</h2>
+      <iframe class="d-none d-md-block w-100 flex-fill" src="https://www.youtube.com/embed/IPlnHe9l34E"
+        allowfullscreen></iframe>
+    </section>
+
+    <section class="d-block d-md-none video-padding">
+      <h2 class="visually-hidden">Escape From Tarkov trailer</h2>
+      <iframe class="w-100" style="min-height: 256px;" src="https://www.youtube.com/embed/IPlnHe9l34E"
+        allowfullscreen></iframe>
+    </section>
+    <section class="container-fluid mt-5">
+      <h4 class="text-center text-dim fw-bolder">Pár Escape From Tarkov streamer:</h4>
+      <hr class="w-25 m-auto" />
+      <div class="d-lg-flex p-2">
+        <div class="col-12 col-lg-4 twitch-div mb-4 pe-lg-3">
+          <iframe src="https://player.twitch.tv/?channel=willerz&autoplay=false&parent=zsoltgombocz.web.elte.hu"
+            allowfullscreen class="fullsized">
+          </iframe>
+        </div>
+        <div class="col-12 col-lg-4 twitch-div mb-4 pe-lg-3">
+          <iframe src="https://player.twitch.tv/?channel=pestily&autoplay=false&parent=zsoltgombocz.web.elte.hu"
+            allowfullscreen class="fullsized">
+          </iframe>
+        </div>
+        <div class="col-12 col-lg-4 twitch-div mb-4">
+          <iframe src="https://player.twitch.tv/?channel=lvndmark&autoplay=false&parent=zsoltgombocz.web.elte.hu"
+            allowfullscreen class="fullsized">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
